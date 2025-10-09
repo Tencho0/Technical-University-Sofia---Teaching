@@ -1,0 +1,23 @@
+.hero--spaced {
+    margin-top: 16px;
+}
+
+.profile-photo {
+    float: right;
+    margin-left: 16px;
+}
+
+.profile-title {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    display: block;
+}
