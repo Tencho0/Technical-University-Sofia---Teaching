@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Task</title>
+    <link rel="stylesheet" href="createnewtask.css">
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Main Navigation">
+            <div class="nav-inner">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="myprofile.html">My Profile</a></li>
+                    <li><a href="allmytasks.html">All My Tasks</a></li>
+                    <li><a class="active" href="createnewtask.html">New Task</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <form action="" method="get" class="form-example">
+            <div class="form-example">
+                <label for="name">Enter Task Name: </label>
+                <input type="text" name="name" id="name" required />
+            </div>
+            <div class="form-example">
+                <label for="email">Enter Task Description: </label>
+                <input type="email" name="email" id="email" required />
+            </div>
+            <div class="form-example">
+                <label for="todoby">To Do By (date):</label>
+                <input type="date" id="todoby" name="todoby">
+            </div>
+            <div class="form-example">
+                <label for="status">Choose a status:</label>
+                <select name="status" id="status">
+                    <option value="Pending">Pending</option>
+                    <option value="Working On">Working On</option>
+                    <option value="Finished">Finished</option>
+                </select>
+            </div>
+            <div class="submitBtn">
+                <input type="submit" value="Create" />
+            </div>
+        </form>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+
+</html>

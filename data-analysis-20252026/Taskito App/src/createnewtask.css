@@ -1,0 +1,57 @@
+header {
+    padding-left: 50px;
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+nav {
+    padding: 12px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 16px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a.active {
+    color: #2f6feb;
+    font-weight: bold;
+}
+
+/* Form  */
+form.form-example {
+    display: table;
+}
+
+div.form-example {
+    display: table-row;
+}
+
+label,
+input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+label {
+    padding-right: 10px;
+}
+
+.submitBtn {
+    padding-top: 10px;
+}
