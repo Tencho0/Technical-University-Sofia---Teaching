@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title" class="welcomemessage">Здравей!</h1>
+    <button onclick="changeText()">Смени текста</button>
+    <button id="myButton">Натисни ме!</button>
+    <button id="myButton2">Премести мишката тук!</button>
+    <button id="myButton3">Махни мишката от тук!</button>
+    <button id="myButton4">Виж информация за евент!</button>
+    <button onclick="createNewElement()">Добави нов параграф към див!</button>
+
+    <div id="list"></div>
+    <div>
+        <button id="decCount">-1</button>
+        <span id="count">0</span>
+        <button id="incCount">+1</button>
+        <button id="reset" title="изтрий записаната стойност">Reset</button>
+    </div>
+
+    <script>
+        // function changeText() {
+        //     document.getElementById("title").textContent = "Текстът беше променен";
+        // }
+
+        function changeText() {
+            document.querySelector("h1").textContent = "Текстът беше променен";
+        }
+
+        const button = document.getElementById("myButton");
+        button.addEventListener("click", function () {
+            alert("Бутонът беше натиснат!")
+        });
+
+        function showMessage() {
+            alert("Добре дошъл!")
+        }
+
+        const secondButton = document.getElementById("myButton2");
+        secondButton.addEventListener("mouseover", showMessage);
+
+        document.getElementById("myButton3").addEventListener("mouseout", showMessage);
+
+        document.getElementById("myButton4").addEventListener("click", function (event) {
+            let message = `Тип на събитието: ${event.type}`;
+            alert(message);
+        })
+
+        const listDiv = document.getElementById("list");
+        // const p = document.createElement("p");
+        // p.textContent = "Здрасти от параграф!";
+        // p.className = "greeting";
+
+        // listDiv.appendChild(p);
+
+        function createNewElement() {
+            const p = document.createElement("p");
+            p.textContent = "Здрасти от параграф!";
+            p.className = "greeting";
+            listDiv.appendChild(p);
+        }
+
+        const countElement = document.getElementById("count");
+        const incCountBtn = document.getElementById("incCount");
+        const decCountBtn = document.getElementById("decCount");
+        const resetBtn = document.getElementById("reset");
+        // let count = 0;
+
+        // incCountBtn.addEventListener("click", () => {
+        //     count++;
+        //     countElement.textContent = count;
+        // });
+
+        const KEY = 'mycounter';
+        let count = Number(localStorage.getItem(KEY));
+
+        function render() {
+            console.log("test func" + count);
+            countElement.textContent = count;
+            localStorage.setItem(KEY, String(count));
+        }
+
+        incCountBtn.addEventListener('click', () => { count++; render(); });
+        decCountBtn.addEventListener('click', () => { count--; render(); });
+        resetBtn.addEventListener('click', () => { count = 0; render(); });    
+    </script>
+</body>
+
+</html>
