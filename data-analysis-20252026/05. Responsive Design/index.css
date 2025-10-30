@@ -1,0 +1,63 @@
+.container {
+    width: 900px;
+    margin: 40px auto;
+}
+
+.hero {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    padding: 24px;
+    margin-top: 24px;
+}
+
+.hero h1 {
+    margin: 0 0 8px;
+    font-size: 32px;
+}
+
+.hero p {
+    margin: 0;
+    color: #555;
+}
+
+.hero--spaced {
+    margin-top: 16px;
+}
+
+.profile-photo {
+    float: right;
+    margin-left: 16px;
+}
+
+.profile-title {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    display: block;
+}
+
+
+@media(width <=900px) {
+    .avatar {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+
+.test2 {
+    max-width: 80%;
+}
+
+.testContainer{
+    display: flex;
+    align-items: center;
+}
